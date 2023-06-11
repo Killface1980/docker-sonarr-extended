@@ -134,8 +134,14 @@ DownloadExtras () {
                 extraFolderName="featurettes"
             elif [ "$tmdbExtraType" == "Trailer" ]; then
                 extraFolderName="trailers"
+            elif [ "$tmdbExtraType" == "Teaser" ]; then
+                extraFolderName="trailers"
             elif [ "$tmdbExtraType" == "Behind the Scenes" ]; then
                 extraFolderName="behind the scenes"
+            elif [ "$tmdbExtraType" == "Clip" ]; then
+                extraFolderName="clips"
+            elif [ "$tmdbExtraType" == "Opening Credits" ]; then
+                extraFolderName="backdrops"
             else
                 extraFolderName="other"
                 log "$itemTitle :: $i of $tmdbVideosListDataIdsCount :: $tmdbExtraType :: ERROR :: Extra Type Not found, placing in \"other\" folder..."
